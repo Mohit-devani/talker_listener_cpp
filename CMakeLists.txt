@@ -16,9 +16,13 @@ ament_target_dependencies(publisher_node std_msgs rclcpp)
 add_executable(subscriber_node src/subscriber_node.cpp)
 ament_target_dependencies(subscriber_node rclcpp std_msgs)
 
+add_executable(subscriber_even_odd src/subscriber_even_odd.cpp)
+ament_target_dependencies(subscriber_even_odd rclcpp std_msgs)
+
 install(TARGETS
 	publisher_node
 	subscriber_node
+	subscriber_even_odd
 	DESTINATION lib/${PROJECT_NAME}
 )
 
