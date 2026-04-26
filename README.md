@@ -1,18 +1,21 @@
-# ROS 2 Talker Listener (C++)
-
-This project demonstrates a simple ROS 2 publisher and subscriber in C++.
-
 ## Nodes
 
-### Publisher Node
+### 1. Number Publisher
 - Publishes integer values to topic: `numbers`
-- Publishes one number every 1 second
+- Runs every 1 second
 
-### Subscriber Node
-- Subscribes to topic: `numbers`
+### 2. Number Subscriber
+- Subscribes to `numbers`
 - Prints HIGH if value > 5, else LOW
 
-## How to Build
+### 3. Even/Odd Subscriber
+- Subscribes to `numbers`
+- Prints whether number is EVEN or ODD
 
-```bash
-colcon build
+### 4. Keyboard Publisher
+- Takes input from keyboard
+- Publishes string commands to topic: `commands`
+
+### 5. Command Listener
+- Subscribes to `commands`
+- Processes user-entered commands
